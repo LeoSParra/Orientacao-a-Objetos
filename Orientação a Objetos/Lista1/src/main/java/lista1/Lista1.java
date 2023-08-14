@@ -18,6 +18,12 @@ public class Lista1 {
         System.out.println(obj1);
         System.out.println(obj2);
         
-        obj1.mostrarAtributos();
+        obj1.comprar(10);
+        obj2.comprar(20);
+        
+        obj1.vender(20);
+        obj1.comprar(1000);
+        obj1.vender(1000);
+        
     }
 }
