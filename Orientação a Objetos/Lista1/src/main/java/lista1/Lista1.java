@@ -5,25 +5,17 @@ public class Lista1 {
 
     public static void main(String[] args) {
         
-        Produto obj1 = new Produto(1, "sabão");
-        obj1.descricao = "Neutro";
-        obj1.preco = 1.2f;
-        obj1.quantidade = 20;
+        Produto obj1 = new Produto(1, "sabão", "neutro", 20, 1.5f);
         
-        Produto obj2 = new Produto(2, "Sabonete");
-        obj2.descricao = "Dove creme";
-        obj2.quantidade = 10;
-        obj2.preco = 1.8f;
+        Produto obj2 = new Produto(2, "Sabonete", "dove creme", 10, 1.4f);
         
-        System.out.println(obj1);
-        System.out.println(obj2);
+        obj1.compra(10);
+        obj2.compra(20);
         
-        obj1.comprar(10);
-        obj2.comprar(20);
+        obj1.vende(20);
+        obj1.compra(1000);
+        obj1.vende(1000);
         
-        obj1.vender(20);
-        obj1.comprar(1000);
-        obj1.vender(1000);
-        
+        obj1.diminuiPreco(1.0f);       
     }
 }

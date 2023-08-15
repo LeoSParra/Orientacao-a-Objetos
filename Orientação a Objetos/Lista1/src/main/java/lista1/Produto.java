@@ -11,16 +11,19 @@ public class Produto {
     public int quantidade;
     public float preco;
     
-    public Produto (int codigo, String nome) {
+    public Produto (int codigo, String nome, String descricao, int quantidade, float preco) {
         this.codigo = codigo;
         this.nome = nome;
+        this.descricao = descricao;
+        this.quantidade = quantidade;
+        this.preco = preco;
     }
     
-    public void comprar(int quantidade) {
+    public void compra(int quantidade) {
         this.quantidade = this.quantidade + quantidade;
     }
     
-    public void vender(int quantidade) {
+    public void vende(int quantidade) {
         if (quantidade > this.quantidade){
             System.out.println("Não há estoque");
         } else {
@@ -28,11 +31,25 @@ public class Produto {
             System.out.println("Produto comprado com sucesso");
         } 
     }
+    
+    public void aumentaPreco(float preco) {
+        this.preco = this.preco + preco;
+    }
+    
+    public void diminuiPreco(float preco) {
+        if (preco > this.preco) {
+            System.out.println("O preço irá ficar negativo!");
+        } else {
+            this.preco = this.preco - preco;
+            System.out.println("O novo valor do produto é: " + this.preco);
+        }
+    }
+    
     public void exibeDados () {
         System.out.println("código: " + this.codigo 
         +"\ndescrição: " + this.descricao
         +"\nnome: " + this.nome
         +"\nquantidade: " + this.quantidade
         +"\npreco: " + this.preco);
-    }  
+    }    
 }
