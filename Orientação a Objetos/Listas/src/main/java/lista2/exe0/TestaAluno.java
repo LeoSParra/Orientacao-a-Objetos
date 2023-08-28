@@ -6,12 +6,13 @@ public class TestaAluno {
         
         Aluno leo = new Aluno();
         
-        leo.setIdade(19);
+        leo.setIdade(10);
         leo.setP1(10f);
-        leo.setP2(9.5f);
-        leo.setRa(1090);
+        leo.setP2(10f);
+        leo.setRa(1090482211006l);
         
         System.out.println(leo.getIdade());
+        System.out.println(leo.mostra());
         
     }
 }
