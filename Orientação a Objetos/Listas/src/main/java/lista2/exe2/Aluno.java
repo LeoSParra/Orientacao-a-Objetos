@@ -43,7 +43,6 @@ public class Aluno {
             this.idade = idade;
         } else {
             System.out.println("Idade inválida");
-            this.idade = -1;
         }
     }
 
@@ -86,7 +85,10 @@ public class Aluno {
     }
     
     public void notaFinal() {
+        System.out.println("A nota final do aluno é: " + (this.p1 + this.p2) / 2);
     }
     
-
+    public void dadosAluno() {
+        System.out.println("Nome: " + this.nome + ", número: " + this.numeroAluno + " e idae: " + this.idade);
+    }
  }

@@ -84,7 +84,5 @@ public class Cliente {
                 ", numeroAgencia=" + this.numeroAgencia + 
                 ", nome=" + this.nome +
                 ", saldo=" + this.saldo + '}';
-    }
-    
-    
+    }  
 }
