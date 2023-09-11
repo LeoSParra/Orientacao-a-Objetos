@@ -1,21 +1,39 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package lista3.exe0;
 
+/**
+ *
+ * @author danie
+ */
 public class Endereco {
     private int id, numero;
     private String nome, bairro, cep, cidade, pais;
 
+    public Endereco(int id, int numero, String nome, String bairro, String cep, String cidade, String pais) {
+        this.id = id;
+        this.numero = numero;
+        this.nome = nome;
+        this.bairro = bairro;
+        this.cep = cep;
+        this.cidade = cidade;
+        this.pais = pais;
+    }
+ 
     public Endereco() {
     }
 
-    public Endereco(int id, int numero, String nome, String bairro, String cep, String cidade, String pais) {
-        this.setId(id);
-        this.setNumero(numero);
-        this.setNome(nome);
-        this.setBairro(bairro);
-        this.setCep(cep);
-        this.setCidade(cidade);
-        this.setPais(pais);
+    public int getNumero() {
+        return numero;
     }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+
     
     public int getId() {
         return id;
@@ -25,14 +43,6 @@ public class Endereco {
         this.id = id;
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
-    public final void setNumero(int numero) {
-        this.numero = numero;
-    }
-    
     public String getNome() {
         return nome;
     }
@@ -75,11 +85,8 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "Endere\u00e7o{" + "id=" + id +
-                ", nome=" + nome +
-                ", bairro=" + bairro +
-                ", cep=" + cep +
-                ", cidade=" + cidade +
-                ", pais=" + pais + '}';
-    }   
+        return "Endereco{" + "id=" + id + ", numero=" + numero + ", nome=" + nome + ", bairro=" + bairro + ", cep=" + cep + ", cidade=" + cidade + ", pais=" + pais + '}';
+    }
+
+   
 }

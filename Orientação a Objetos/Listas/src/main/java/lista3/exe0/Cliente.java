@@ -1,6 +1,14 @@
 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package lista3.exe0;
 
+/**
+ *
+ * @author danie
+ */
 public class Cliente {
     private int id;
     private String nome, rg, cpf;
@@ -10,18 +18,18 @@ public class Cliente {
     }
 
     public Cliente(int id, String nome, String rg, String cpf, Endereco endereco) {
-        this.setId(id);
-        this.setNome(nome);
-        this.setRg(rg);
-        this.setCpf(cpf);
-        this.setEndereco(endereco);
+        this.id = id;
+        this.nome = nome;
+        this.rg = rg;
+        this.cpf = cpf;
+        this.endereco = endereco;
     }
-    
+
     public int getId() {
         return id;
     }
 
-    public final void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -29,7 +37,7 @@ public class Cliente {
         return nome;
     }
 
-    public final void setNome(String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -37,7 +45,7 @@ public class Cliente {
         return rg;
     }
 
-    public final void setRg(String rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
@@ -45,7 +53,7 @@ public class Cliente {
         return cpf;
     }
 
-    public final void setCpf(String cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -53,12 +61,17 @@ public class Cliente {
         return endereco;
     }
 
-    public final void setEndereco(Endereco endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 
     @Override
     public String toString() {
-        return "Cliente{" + "id=" + id + ", nome=" + nome + ", rg=" + rg + ", cpf=" + cpf + ", endereco=" + endereco + '}';
-    }   
+        return "Cliente{id=" + id + 
+                ", nome=" + nome + ", rg=" + rg + 
+                ", cpf=" + cpf + ", endereco=" + 
+                endereco.toString() + '}';
+    }
+    
+    
 }
