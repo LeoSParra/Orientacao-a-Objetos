@@ -51,6 +51,7 @@ public class Forum {
 
     @Override
     public String toString() {
+        // messages -> percorre o vetor e executa toString() de cada message
         return "Forum{" + "name=" + name + ", url=" + url + ", forumMessages=" + forumMessages + '}';
     }
     
