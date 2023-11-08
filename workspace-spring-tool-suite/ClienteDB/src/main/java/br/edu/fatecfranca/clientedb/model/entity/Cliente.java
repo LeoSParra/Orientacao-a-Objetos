@@ -24,7 +24,6 @@ public class Cliente {
 	private String telefone;
 	
 	@Column(name = "digital")
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String digital;
 	
 	@Column(name = "idade")

@@ -6,9 +6,11 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import br.edu.fatecfranca.clientedb.model.dto.ClienteDto;
@@ -39,6 +41,21 @@ public class ClienteService {
 	
 	@PostMapping
 	public ClienteDto addCliente(@RequestBody ClienteDto clienteDto) {
+		Cliente cliente = converteDtoToCliente(clienteDto);
+		return converteClienteToDto(injecao.save(cliente));
+	}
+	
+	@DeleteMapping("/{cpf}")
+	public String removeCliente(@PathVariable Long cpf) {
+		if (injecao.existsById(cpf)) {
+			injecao.deleteById(cpf);
+			return "Remoção com sucesso";
+		} 
+		return "Cliente não existe";
+	}
+	
+	@PutMapping
+	public ClienteDto uptadeCliente(@RequestBody ClienteDto clienteDto) {
 		Cliente cliente = converteDtoToCliente(clienteDto);
 		return converteClienteToDto(injecao.save(cliente));
 	}
